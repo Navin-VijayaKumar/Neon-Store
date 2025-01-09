@@ -1,40 +1,48 @@
-import React, { useEffect, useRef } from "react";
-import * as THREE from "three"; // Import three.js explicitly
-import DOTS from "vanta/dist/vanta.dots.min"; // Import Vanta Dots effect
+import React, { Component, createRef } from 'react';
+import './Home.css';
 
-const Home = () => {
-  const vantaRef = useRef(null); // Ref for the container div
-  const vantaEffect = useRef(null); // Ref for Vanta instance
+export class Home extends Component {
+  vantaEffect = null;
+  vantaRef = createRef();
 
-  useEffect(() => {
-    if (!vantaEffect.current) {
-      try {
-        vantaEffect.current = DOTS({
-          el: vantaRef.current, // Attach Vanta effect to the element
-          THREE: THREE, // Pass the imported THREE library explicitly
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.0,
-          minWidth: 200.0,
-          scale: 1.0,
-          scaleMobile: 1.0,
-          color: 0x736d90,
-          color2: 0x1ceadb,
-          size: 5.5,
-          spacing: 36.0,
-        });
-      } catch (error) {
-        console.error("[VANTA] Init error:", error);
-      }
-    }
+  componentDidMount() {
+    // Dynamically load Vanta and Three.js scripts
+    const loadScript = (src) =>
+      new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = src;
+        script.async = true;
+        script.onload = resolve;
+        script.onerror = reject;
+        document.body.appendChild(script);
+      });
 
-    return () => {
-      if (vantaEffect.current) vantaEffect.current.destroy();
-    };
-  }, []);
+    Promise.all([
+      loadScript('https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js'),
+      loadScript('https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.dots.min.js'),
+    ]).then(() => {
+      this.vantaEffect = window.VANTA.DOTS({
+        el: this.vantaRef.current,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0x800ff,
+        color2: 0xc0289c,
+      });
+    });
+  }
 
-  return <div ref={vantaRef} style={{ width: "100%", height: "100vh" }} />;
-};
+  componentWillUnmount() {
+    if (this.vantaEffect) this.vantaEffect.destroy();
+  }
+
+  render() {
+    return <div ref={this.vantaRef} className="vanta-container" style={{ height: '100vh', width: '100%' }}></div>;
+  }
+}
 
 export default Home;
