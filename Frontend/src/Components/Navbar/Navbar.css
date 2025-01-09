@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, monospace;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .all {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background-color: #2d2d2d;
+    font-size: 18px;
+    font-family: monospace;
+
+  }
+  
+  .all ul {
+    padding: 10px 30px;
+    border-radius: 30px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+
+  }
+  
+  .all ul li {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 10px;
+    color: #ffffcc;
+    text-shadow: 0 0 5px #fff,
+    
+
+      
+  }
+  
+  .all img {
+    width: 50px;
+    height: 50px;
+  }
+  
+.all{
+  display: flex;
+  padding: -1% -1%;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.all{
+  flex: 1;
+  text-align: right;
+
+}
+.alg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  background-color: #000000;
+  font-size: 16px;
+}
+#nav-list{
+    background-color: #333633;
+    border: 2px solid rgb(13, 0, 255);
+}
+
+.alg ul {
+  padding: 10px 30px;
+  border-radius: 30px;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+}
+
+.all ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 14px;
+  position: relative;
+}
+.all ul li a{
+  color: rgb(71, 75, 72);
+  text-decoration:none ;
+  font-size: 19px;
+}
+.all ul li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: rgb(0, 42, 255);
+  display: block;
+  margin: auto;
+  transition: 0.5s ;
+}
+.all ul li:hover::after{
+  width: 100%;
+
+}
+  
+  .button {
+    padding: 8px 16px;
+    background-color: #2200ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+
+  }
+  .button:active{
+    border-radius: 50%;
+    transition: 0;
+
+  }
+  .title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+
+  }
+li.active {
+font-size: 18px;
+margin-bottom: 15px;
+font-weight: 600;
+  }
+
+  .neontext {
+    animation: flicker 1.5s infinite alternate;
+    color: #fff;
+  }
+  
+  h1 {
+    font-size: 4.2rem;    
+  }
+  
+  /* Flickering animation */
+  @keyframes flicker {
+      
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #eec5e7,
+        0 0 11px #f483ec,
+       
+        0 0 80px rgb(240, 56, 191),
+      
+        0 0 85px rgb(255, 0, 208);
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+  
+  
+    
+  h2 {
+   font-size: 1.8rem;
+  }
+  .container {
+    margin-top: 20vh;
+  }
+  
+  body {
+    font-size: 18px;
+    font-family: "Helvetica Neue", sans-serif;
+    background-color: #010a01;
+  }  
+  
+  h1, h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
