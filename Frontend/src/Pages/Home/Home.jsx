@@ -1,6 +1,7 @@
 import React, { Component, createRef } from 'react';
 import './Home.css';
-
+import search2 from '../AssertsPage/search2.png'
+import { Link } from 'react-router-dom';
 export class Home extends Component {
   vantaEffect = null;
   vantaRef = createRef();
@@ -41,7 +42,16 @@ export class Home extends Component {
   }
 
   render() {
-    return <div ref={this.vantaRef} className="vanta-container" style={{ height: '100vh', width: '100%' }}></div>;
+    return<div> 
+      <div ref={this.vantaRef} className="vanta-container" style={{ height: '100vh', width: '100%' }}></div>
+
+     <div className="search">
+    <Link to='/slider'>
+        <img src={search2} alt="" />
+        </Link>
+      </div>
+      </div>
+    ;
   }
 }
 

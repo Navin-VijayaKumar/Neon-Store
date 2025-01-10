@@ -1,0 +1,38 @@
+body{
+    color:0xc0289c;
+    background-color: 0xc0289c;
+}
+.slider-nav{
+    width: 300px;
+    height: 750px;
+    margin-top: 14px;
+    background-color: rgb(181, 207, 229);
+    margin-left: 14px;
+    border-radius: 12px;
+    border: 4px solid blue;
+}
+@keyframes appear{
+    from{
+        opacity: 0;
+       transform: translateX(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+.slider-nav{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+
+}
+.slider-nav h3{
+font-size: 24px;
+display: flex;
+align-items: center;
+justify-content:center ;    
+font-family: serif;
+font-weight: 600;
+}

@@ -6,6 +6,7 @@ import News from './Pages/News/News'
 import Contact from './Pages/Contact/Contact'
 import About from './Pages/About/About'
 import Login from './Pages/Login/Login'
+import Slider from './Components/Slider/Slider'
 function App() {
   // <Link to='/'><li>Home</li></Link> 
   // <Link to='/news'><li>News</li></Link> 
@@ -15,11 +16,12 @@ function App() {
     <>
     <Navbar></Navbar>
     <Routes>
-      <Route path='/' element={<Home></Home>}> </Route>
+      <Route path='/home' element={<Home></Home>}> </Route>
       <Route path='/news' element={<News></News>}> </Route>
       <Route path='/contact' element={<Contact></Contact>}> </Route>
       <Route path='/about' element={<About></About>}> </Route>
       <Route path='/login' element={<Login></Login>}> </Route>
+      <Route path='/slider'element={<Slider></Slider>}> </Route>
     </Routes>
     </>
   )

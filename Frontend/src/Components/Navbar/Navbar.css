@@ -189,3 +189,11 @@ align-items: center;
 gap: 16px;
 
 }
+.search{
+  position: absolute;
+  top: 15%; /* Adjust position as needed */
+  left: 1%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+}

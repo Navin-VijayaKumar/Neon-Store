@@ -2,6 +2,7 @@ import React from 'react'
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 import gamel1 from '../Asserts/gamel1.png';
+import search2 from '../Asserts/search2.png';
 const Navbar = () => {
   return (
     <div className='all'>
@@ -20,7 +21,7 @@ const Navbar = () => {
       </div>
        
       <ul id="nav-list">
-      <Link to='/'><li>Home</li></Link> 
+      <Link to='/home'><li>Home</li></Link> 
       <Link to='/news'><li>News</li></Link> 
       <Link to='/contact'><li>Contact</li></Link> 
       <Link to='/about'><li>About</li></Link> 
@@ -28,7 +29,11 @@ const Navbar = () => {
        
     <Link to='/login' > <button className='button'>Login</button>  </Link>
        </ul>
-
+   <div className="search">
+    <Link to='/slider'>
+        <img src={search2} alt="" />
+        </Link>
+      </div>
 
     </div>
   )
