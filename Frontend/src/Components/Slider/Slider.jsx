@@ -3,12 +3,45 @@ import './Slider.css';
 const Slider = () => {
   return (
    <div className="slider">
-<div className="slider-nav">
-    <div className="games">
-        <h3>Game</h3>
+       
+         <div className="games">
+            <div className="heading">
+              <h3>Game</h3>
+            </div>
+            <div className="gamelist">
+        <div className="number">
+
+        <p>ALL</p>
+        </div>
+        <div className="number">
+
+        <p>Battle Royal</p>
+        </div>
+        <div className="number">
+
+        <p>Story Game</p>
+        </div>
+            <div className="heading">
+              <h3>Product Key</h3></div>
+              <div className="number">
+
+           <p>Windows Key</p>
+              </div>
+          <div className="number">
+
+               <p>Editing</p>
+          </div>
+        <div className="number">
+
+           <p>Story Game</p>
+         </div>
+
+            </div>
+          </div>
+    <div className="search-bar">
+      <input type='text' placeholder='Search'></input>
     </div>
-</div>
-   </div>
+  </div>
   )
 }
 
