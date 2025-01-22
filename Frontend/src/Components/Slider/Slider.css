@@ -2,15 +2,49 @@ body{
     color:0xc0289c;
     background-color: 0xc0289c;
 }
-.slider-nav{
+.games {
     width: 300px;
-    height: 750px;
-    margin-top: 14px;
-    background-color: rgb(149, 147, 147);
+    height: 700px;
+    margin-top: 20px;
+    background-color: rgb(232, 230, 230);
     margin-left: 14px;
-    border-radius: 12px;
-    border: 4px solid blue;
+    border-radius: 10px;
+    position: relative;
 }
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.games::after ,.games::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    translate:-50% -50%;
+    background-image: conic-gradient(from var(--angle),transparent 60%,blue,red,green,rgb(172, 12, 113),rgb(0, 255, 255),rgb(246, 0, 0));
+    z-index: -1; 
+        padding: 3px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+}
+.games::before{
+    filter: blur(1.9rem);
+    opacity:0.7;
+
+}
+
+@keyframes spin {
+    from{
+        --angle:0deg;
+    }
+    to{
+        --angle:360deg;
+    }
+}
+
 @keyframes appear{
     from{
         opacity: 0;
@@ -35,4 +69,91 @@ align-items: center;
 justify-content:center ;    
 font-family: serif;
 font-weight: 600;
+}
+.slider{
+    display: flex;
+    align-items: start;
+
+}
+.search-bar{
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 410px;
+
+}
+.search-bar input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    background-color: rgb(58, 58, 58);
+    color: white;
+    
+    border: none;
+    height: 60px;
+    font-family: monospace;
+    font-size: 20px;
+    border-radius: 30px;
+
+}
+.search-bar::before {
+    content: url('../Asserts/searchInput.png'); 
+    position: absolute;
+    left: 470px;
+    top: 47%;
+    transform: translateY(-50%);
+    width: 20px; 
+    height: 20px;
+  }
+  .search-bar input::placeholder{
+    padding-left: 20px;
+  }
+
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-family: monospace;
+    font-size: 25px;
+    padding: 15px;
+
+
+}
+.gamelist{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 23px;
+    font-family: monospace;
+    padding: 17px;
+    cursor: pointer;
+    
+    
+    
+}
+p{
+    font-weight: 400;
+    padding: 15px;
+}
+
+.number{
+    background-color: rgb(186, 186, 186);
+    margin-bottom: 15px;
+    width: 200px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+
+
+}
+.number:hover{
+border: 2px solid rgb(0, 47, 255);    
+background-color:  rgb(216, 216, 216);
 }
