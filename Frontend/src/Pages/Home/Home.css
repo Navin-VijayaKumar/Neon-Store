@@ -10,7 +10,7 @@
   }
 .search{
   position: absolute;
-  top: 20%; /* Adjust position as needed */
+  top: 15%; /* Adjust position as needed */
   left: 1%;
   padding: 10px 20px;
   border-radius: 5px;
@@ -20,3 +20,4 @@
   width: 50px;
     height: 50px;
 }
+

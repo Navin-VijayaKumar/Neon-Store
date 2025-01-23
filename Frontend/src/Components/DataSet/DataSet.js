@@ -3,7 +3,7 @@ import g1 from './Images/g1.jpg';
 const all_product = [
     {
         id: 1,
-        name: "Intel Core i7-13700K Desktop Processor 16 cores (8 P-cores + 8 E-cores) 30M Cache, up to 5.4 GHz Socket LGA 1700",
+        name: "Intel Core i7-13700K Desktop Processor 16 cores",
         image: g1,
         category: "cpu",
         new_price: 35000,
@@ -14,7 +14,7 @@ const all_product = [
     },
     {
         id: 2,
-        name: "Intel Core i7-13700K Desktop Processor 16 cores (8 P-cores + 8 E-cores) 30M Cache, up to 5.4 GHz Socket LGA 1700",
+        name: "Intel Core i7-13700K Desktop Processor 16 cores",
         image: g1,
         category: "cpu",
         new_price: 35000,
@@ -25,7 +25,7 @@ const all_product = [
     },
     {
         id: 3,
-        name: "Intel Core i7-13700K Desktop Processor 16 cores (8 P-cores + 8 E-cores) 30M Cache, up to 5.4 GHz Socket LGA 1700",
+        name: "Intel Core i7-13700K Desktop Processor 16 cores ",
         image: g1,
         category: "cpu",
         new_price: 35000,
@@ -36,7 +36,7 @@ const all_product = [
     },
     {
         id: 4,
-        name: "Intel Core i7-13700K Desktop Processor 16 cores (8 P-cores + 8 E-cores) 30M Cache, up to 5.4 GHz Socket LGA 1700",
+        name: "Intel Core i7-13700K Desktop Processor 16 cores ",
         image: g1,
         category: "cpu",
         new_price: 35000,
@@ -47,7 +47,7 @@ const all_product = [
     },
     {
         id:5,
-        name: "Intel Core i7-13700K Desktop Processor 16 cores (8 P-cores + 8 E-cores) 30M Cache, up to 5.4 GHz Socket LGA 1700",
+        name: "Intel Core i7-13700K Desktop Processor 16 cores",
         image: g1,
         category: "cpu",
         new_price: 35000,
@@ -58,7 +58,7 @@ const all_product = [
     },
     {
         id: 6,
-        name: "Intel Core i7-13700K Desktop Processor 16 cores (8 P-cores + 8 E-cores) 30M Cache, up to 5.4 GHz Socket LGA 1700",
+        name: "Intel Core i7-13700K Desktop Processor 16 cores",
         image: g1,
         category: "cpu",
         new_price: 35000,
@@ -69,7 +69,7 @@ const all_product = [
     },
     {
         id: 7,
-        name: "Intel Core i7-13700K Desktop Processor 16 cores (8 P-cores + 8 E-cores) 30M Cache, up to 5.4 GHz Socket LGA 1700",
+        name: "Intel Core i7-13700K Desktop Processor 16 cores",
         image: g1,
         category: "cpu",
         new_price: 35000,
@@ -80,7 +80,7 @@ const all_product = [
     },
     {
         id: 8,
-        name: "Intel Core i7-13700K Desktop Processor 16 cores (8 P-cores + 8 E-cores) 30M Cache, up to 5.4 GHz Socket LGA 1700",
+        name: "Intel Core i7-13700K Desktop Processor 16 cores",
         image: g1,
         category: "cpu",
         new_price: 35000,
@@ -91,7 +91,7 @@ const all_product = [
     },
     {
         id: 9,
-        name: "Intel Core i7-13700K Desktop Processor 16 cores (8 P-cores + 8 E-cores) 30M Cache, up to 5.4 GHz Socket LGA 1700",
+        name: "Intel Core i7-13700K Desktop Processor 16 cores",
         image: g1,
         category: "cpu",
         new_price: 35000,
@@ -102,7 +102,7 @@ const all_product = [
     },
     {
         id: 10,
-        name: "Intel Core i7-13700K Desktop Processor 16 cores (8 P-cores + 8 E-cores) 30M Cache, up to 5.4 GHz Socket LGA 1700",
+        name: "Intel Core i7-13700K Desktop Processor 16 cores",
         image: g1,
         category: "cpu",
         new_price: 35000,
@@ -113,7 +113,7 @@ const all_product = [
     },
     {
         id: 11,
-        name: "Intel Core i7-13700K Desktop Processor 16 cores (8 P-cores + 8 E-cores) 30M Cache, up to 5.4 GHz Socket LGA 1700",
+        name: "Intel Core i7-13700K Desktop Processor 16 cores",
         image: g1,
         category: "cpu",
         new_price: 35000,
