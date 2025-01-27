@@ -1,6 +1,6 @@
 body{
-    color:0xc0289c;
-    background-color: 0xc0289c;
+   
+    cursor: url("../Asserts/cursor.png"), auto;
 }
 .games {
     width: 300px;
@@ -186,6 +186,7 @@ background-color:  rgb(229, 228, 228);
 margin-bottom: 30px;
 font-size: 20px;
 margin-top: 30px;
+cursor: pointer;
 
 }
 .item1 img{

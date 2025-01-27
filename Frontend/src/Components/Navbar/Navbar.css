@@ -175,7 +175,10 @@ font-weight: 600;
     font-size: 18px;
     font-family: "Helvetica Neue", sans-serif;
     background-color: #010a01;
+    cursor: url("../Asserts/cursor.png"), auto;
+
   }  
+ 
   
   h1, h2 {
     text-align: center;

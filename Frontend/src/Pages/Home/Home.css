@@ -1,3 +1,6 @@
+body{
+  cursor: url("../../Components/Asserts//cursor.png"), auto;
+}
 .vanta-container{
     height: 100vh; /* Full viewport height */
     width: 100%;
