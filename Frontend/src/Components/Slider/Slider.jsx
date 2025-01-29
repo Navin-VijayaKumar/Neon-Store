@@ -1,7 +1,7 @@
 import React from 'react'
 import './Slider.css';
 import  { useContext } from 'react';
-
+import settingns1 from '../Asserts/settingns1.png'
 import { AppContext } from '../../ContextProvider/ContextProvider';
 const Slider = () => {
   const { all_product } = useContext(AppContext);
@@ -46,6 +46,9 @@ const Slider = () => {
        </div>
     <div className="search-bar">
       <input type='text' placeholder='Search'></input>
+      <div className="setting">
+        <img src={settingns1}></img>
+      </div>
     </div>
     
 
