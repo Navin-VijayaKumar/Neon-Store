@@ -196,3 +196,7 @@ gap: 16px;
 .button{
   font-size: 16px;
 }
+.setting{
+  position: absolute;
+  right: 8px;
+}
