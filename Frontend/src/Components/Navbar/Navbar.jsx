@@ -30,13 +30,12 @@ const Navbar = () => {
        
     <Link to='/login' > <button className='button'>Login</button>  </Link>
        </ul>
-   <div className="search">
-    <Link to='/slider'>
-        <img src={search2} alt="" />
-        </Link>
-      </div>
+   
 <div className="setting">
-        <img src={settingns1}></img>
+<Link to='/slider'>
+
+        <img src={search2}></img>
+        </Link>
       </div>
     </div>
   )

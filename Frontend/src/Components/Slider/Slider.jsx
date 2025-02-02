@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import './Slider.css';
 import { AppContext } from '../../ContextProvider/ContextProvider';
-
+import { Link } from 'react-router-dom';
 const Slider = () => {
   const { all_product } = useContext(AppContext);
   const [selectedCategory, setSelectedCategory] = useState(''); 
@@ -59,10 +59,11 @@ const Slider = () => {
           onChange={(e) => setSelectedCategory('')} // Reset category when searching
         />
       </div>
-      <div className="items">
+    <div className="items">
         {filteredProducts.map((product, index) => (
           <div key={index}>
-            <div className="item1">
+           <Link to={`/product/${product.id}`}>
+              <div className="item1">
               <img src={product.image} alt={product.name} />
               <div className="name">
                 <p>{product.name}</p>
@@ -79,6 +80,7 @@ const Slider = () => {
                 </div>
               </div>
             </div>
+        </Link> 
           </div>
         ))}
       </div>

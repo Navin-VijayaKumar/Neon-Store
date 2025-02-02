@@ -1,0 +1,18 @@
+.rating-all{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-left: 120px;
+}
+.rating-container img{
+    height: 30px;
+    width: 30px;
+    gap: 5px;
+
+}
+.rating-num{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+
+}
