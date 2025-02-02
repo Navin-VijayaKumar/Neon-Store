@@ -84,7 +84,7 @@ font-weight: 600;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 650px;
+    margin-left:43%;
 
 }
 .search-bar input{
@@ -228,7 +228,19 @@ cursor: pointer;
     font-size: 20px;
     border-radius: 28px;
 }
+.offer p{
+    font-weight:550;
+
+}
+
 .setting{
     margin-left: 1400px;
     position: absolute;
+}
+.name p{
+padding-top: 8px;
+padding-left: 1px;
+font-family:sans-serif;
+
+
 }

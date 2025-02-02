@@ -59,11 +59,7 @@ export class Home extends Component {
         <div ref={this.vantaRef} className="vanta-container" style={{ height: '100vh', width: '100%' }}></div>
 
         {/* Search section */}
-        <div className="search">
-          <Link to="/slider">
-            <img src={search2} alt="Search" />
-          </Link>
-        </div>
+       
       </div>
     );
   }

@@ -1,0 +1,172 @@
+body{
+    font-family: sans-serif;
+}
+.inner-display-img img{
+    width: 900px;
+    height: 500px;
+    object-fit: cover;
+
+    border-radius: 12px;
+    margin-left: 120px;
+    margin-top: 100px;
+}
+.inner-game-name h3{
+    font-size: 40px;
+    color: white;
+    font-family: monospace;
+padding-top: 40px;
+margin-left: 120px;
+font-weight:900;
+}
+.inner-display-des p{
+    margin-left: 120px;
+    width: 900px;
+    color: white;
+    font-family: monospace;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding-top: 0;
+
+}
+.inner-display-des h3{
+    color: white;
+    margin-left: 120px;
+    padding: 10px;
+
+}
+.inner-display-des {
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+.inner-display-right{
+    width: 400px;
+    height: 600px;
+
+}
+.inner-display-side{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inner-display-right{
+    padding: 50px;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    object-fit: cover;
+    flex-direction: column;
+}
+.inner-display-right img{
+    width: 300px;
+  
+}
+.age-limit img{
+    width: 70px;
+    height: 70px;
+
+}
+.age-limit{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: start;
+    width: 180px;
+    padding: 10px;
+    height: 80px;
+    border-radius: 18px;
+    border: 2px solid white;
+
+}
+.age-limit p{
+    color: red;
+    font-weight: bold;
+    font-size: 35px;
+
+}
+.buy-now button{
+    width: 300px;
+    height: 40px;
+    border-radius: 6px;
+    font-size: 20px;
+    background-color: rgb(36, 246, 246);
+    border: none;
+}
+.buy-now{
+    transition: 0.3s;
+    padding-bottom: 10px;
+
+}
+.buy-now button:hover{
+    background-color: rgb(162, 255, 247);
+    border-radius: 6px;
+    font-size: 20px;
+
+}
+.buy-now:hover{
+    transform: scale(1.03);
+}
+.cart button{
+    width: 300px;
+    height: 40px;
+    border-radius: 6px;
+    font-size: 20px;
+    background-color: rgb(158, 158, 158);
+    border: none;
+}
+.cart{
+    transition: 0.3s;
+    padding-bottom: 10px;
+
+
+}
+.cart button:hover{
+    background-color: rgb(197, 197, 197);
+    border-radius: 6px;
+    font-size: 20px;
+
+}
+.cart:hover{
+    transform: scale(1.03);
+}
+.wish button{
+    width: 300px;
+    height: 40px;
+    border-radius: 6px;
+    font-size: 20px;
+    background-color: rgb(162, 162, 162);
+    border: none;
+}
+.wish{
+    transition: 0.3s;
+    padding-bottom: 10px;
+
+
+}
+.wish button:hover{
+    background-color: rgb(197, 197, 197);
+    border-radius: 6px;
+    font-size: 20px;
+
+}
+.wish:hover{
+    transform: scale(1.03);
+}
+
+.inner-price p{
+    color: rgb(183, 210, 201);
+    font-weight: bold;
+    font-size: 30px;
+    transition: 3s;
+
+}
+.inner-price p:hover{
+    color: aqua;
+}
+.inner-display-rating{
+    
+}

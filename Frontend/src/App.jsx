@@ -7,6 +7,7 @@ import Contact from './Pages/Contact/Contact'
 import About from './Pages/About/About'
 import Login from './Pages/Login/Login'
 import Slider from './Components/Slider/Slider'
+import ProductDisplay from './Components/ProductDisplay/ProductDisplay'
 function App() {
   // <Link to='/'><li>Home</li></Link> 
   // <Link to='/news'><li>News</li></Link> 
@@ -22,6 +23,7 @@ function App() {
       <Route path='/about' element={<About></About>}> </Route>
       <Route path='/login' element={<Login></Login>}> </Route>
       <Route path='/slider'element={<Slider></Slider>}> </Route>
+      <Route path='/product/:productID'element={<ProductDisplay></ProductDisplay>}> </Route>
     </Routes>
     </>
   )
