@@ -8,6 +8,7 @@ import About from './Pages/About/About'
 import Login from './Pages/Login/Login'
 import Slider from './Components/Slider/Slider'
 import ProductDisplay from './Components/ProductDisplay/ProductDisplay'
+import Footer from './Components/Footer/Footer'
 function App() {
   // <Link to='/'><li>Home</li></Link> 
   // <Link to='/news'><li>News</li></Link> 
@@ -25,6 +26,7 @@ function App() {
       <Route path='/slider'element={<Slider></Slider>}> </Route>
       <Route path='/product/:productID'element={<ProductDisplay></ProductDisplay>}> </Route>
     </Routes>
+    <Footer></Footer>
     </>
   )
 }
