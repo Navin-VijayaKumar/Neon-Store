@@ -15,7 +15,7 @@ const Slider = () => {
     <div className="slider">
       <div className="fixed">
         <div className="games">
-          <div className="heading">
+          <div className="heading1">
             <h3>Games</h3>
           </div>
           <div className="gamelist">
@@ -34,7 +34,7 @@ const Slider = () => {
             <div className="number" onClick={() => setSelectedCategory('Story Game')}>
               <p>Story Game</p>
             </div>
-            <div className="heading">
+            <div className="heading2">
               <h3>Product Key</h3>
             </div>
             <div className="number" onClick={() => setSelectedCategory('Windows Key')}>
