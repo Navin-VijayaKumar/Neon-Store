@@ -1,5 +1,7 @@
-body{
+*{
     font-family: sans-serif;
+    box-sizing: border-box;
+
 }
 .inner-display-img img{
     width: 900px;
@@ -45,6 +47,12 @@ font-weight:900;
 .inner-display-right{
     width: 400px;
     height: 600px;
+    border: 2px solid rgb(4, 4, 4);
+    border-radius: 12px;
+    transition: 1.5s;
+}
+.inner-display-right:hover{
+    border: 2px solid rgb(255, 255, 255);
 
 }
 .inner-display-side{
@@ -75,17 +83,24 @@ font-weight:900;
     align-items: center;
     flex-direction: row;
     justify-content: start;
-    width: 180px;
-    padding: 10px;
-    height: 80px;
+    width: 190px;
+    box-sizing: border-box;
+    padding: 18px;
+    height: 90px;
     border-radius: 18px;
-    border: 2px solid white;
+    transition: 1.5s;
+    border: 2px solid rgb(4, 4, 4);
 
+    
 }
 .age-limit p{
     color: red;
     font-weight: bold;
     font-size: 35px;
+    
+}
+.age-limit:hover{
+    border: 2px solid white;
 
 }
 .buy-now button{
@@ -93,7 +108,7 @@ font-weight:900;
     height: 40px;
     border-radius: 6px;
     font-size: 20px;
-    background-color: rgb(36, 246, 246);
+    background-color: rgb(12, 233, 233);
     border: none;
 }
 .buy-now{
@@ -102,20 +117,18 @@ font-weight:900;
 
 }
 .buy-now button:hover{
-    background-color: rgb(162, 255, 247);
+    background-color: rgb(109, 242, 231);
     border-radius: 6px;
     font-size: 20px;
 
 }
-.buy-now:hover{
-    transform: scale(1.03);
-}
+
 .cart button{
     width: 300px;
     height: 40px;
     border-radius: 6px;
     font-size: 20px;
-    background-color: rgb(158, 158, 158);
+    background-color: rgb(144, 145, 145);
     border: none;
 }
 .cart{
@@ -130,15 +143,13 @@ font-weight:900;
     font-size: 20px;
 
 }
-.cart:hover{
-    transform: scale(1.03);
-}
+
 .wish button{
     width: 300px;
     height: 40px;
     border-radius: 6px;
     font-size: 20px;
-    background-color: rgb(162, 162, 162);
+    background-color: rgb(144, 145, 145);
     border: none;
 }
 .wish{
@@ -153,9 +164,6 @@ font-weight:900;
     font-size: 20px;
 
 }
-.wish:hover{
-    transform: scale(1.03);
-}
 
 .inner-price p{
     color: rgb(183, 210, 201);
@@ -166,7 +174,4 @@ font-weight:900;
 }
 .inner-price p:hover{
     color: aqua;
-}
-.inner-display-rating{
-    
 }
