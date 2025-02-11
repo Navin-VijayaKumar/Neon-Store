@@ -31,6 +31,7 @@ const ProductDisplay = () => {
                 <h3>Description</h3>
                 <p>{product.gameDes}</p>
               </div>
+             
             </div>
     
             <div className="inner-display-right">
@@ -65,20 +66,22 @@ const ProductDisplay = () => {
         )}
     <div className="sys">
 
-            <SystemReq osMin={product.osMin}
-            osRec={product.osRec}
-            proMin={product.proMin}
-            proRec={product.proRec}
-            memoryMin={product.memoryMin}
-            memoryRec={product.memoryRec}
-            storageMin={product.storageMin}
-            storageRec={product.storageRec}
-            graphicMin={product.graphicMin}
-            graphicRec={product.graphicRec}
-            otherMin={product.otherMin}
-            otherRec={product.otherRec}
-            languages={product.languages}
-            />
+    <SystemReq 
+    osMin={product?.osMin}
+    osRec={product?.osRec}
+    proMin={product?.proMin}
+    proRec={product?.proRec}
+    memoryMin={product?.memoryMin}
+    memoryRec={product?.memoryRec}
+    storageMin={product?.storageMin}
+    storageRec={product?.storageRec}
+    graphicMin={product?.graphicMin}
+    graphicRec={product?.graphicRec}
+    otherMin={product?.otherMin}
+    otherRec={product?.otherRec}
+    languages={product?.languages}
+/>
+
     </div>
       </div>
     );

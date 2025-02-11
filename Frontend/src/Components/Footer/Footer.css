@@ -1,5 +1,31 @@
 .footer-con{
     width: 100%;
     height: 600px;
-    background-color: #333633;
+    background-color: #414341;
+    margin-bottom: 0;
+    
 }
+.footer-heading{
+    opacity: 0.7;
+    padding: 20px;
+
+}
+.footer-about{
+    display: flex;
+    justify-content: center;
+   font-family:sans-serif;
+    width: 96%;
+    height: 600px;
+    line-height: 40px;
+}
+.footer-img img{
+    width: 50px;
+    height: 50px;
+    margin-top: 400px;
+}
+.footer-icons img{
+gap: 40px;
+padding: 9px;
+}
+
+

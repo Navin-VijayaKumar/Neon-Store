@@ -47,12 +47,12 @@ font-weight:900;
 .inner-display-right{
     width: 400px;
     height: 600px;
-    border: 2px solid rgb(4, 4, 4);
+    border: 1px solid rgb(0, 85, 255);
     border-radius: 12px;
     transition: 1.5s;
 }
 .inner-display-right:hover{
-    border: 2px solid rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
 
 }
 .inner-display-side{
@@ -89,7 +89,7 @@ font-weight:900;
     height: 90px;
     border-radius: 18px;
     transition: 1.5s;
-    border: 2px solid rgb(4, 4, 4);
+    border: 1px solid rgb(0, 85, 255);
 
     
 }
@@ -98,9 +98,10 @@ font-weight:900;
     font-weight: bold;
     font-size: 35px;
     
+    
 }
 .age-limit:hover{
-    border: 2px solid white;
+    border: 1px solid white;
 
 }
 .buy-now button{
