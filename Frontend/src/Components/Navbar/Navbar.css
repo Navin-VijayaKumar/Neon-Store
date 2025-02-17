@@ -1,8 +1,11 @@
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif, monospace;
+    font-family: 'Poppins';
+
+
   }
   
   a {
@@ -17,7 +20,7 @@
     padding: 15px 8%;
     background-color: #2d2d2d;
     font-size: 18px;
-    font-family: monospace;
+    /* font-family: monospace; */
 
   }
   
@@ -136,6 +139,8 @@ font-weight: 600;
   .neontext {
     animation: flicker 1.5s infinite alternate;
     color: #fff;
+    font-weight: 600;
+    font-family: "Poppins", serif;
   }
   
   h1 {
@@ -173,7 +178,7 @@ font-weight: 600;
   
   body {
     font-size: 18px;
-    font-family: "Helvetica Neue", sans-serif;
+    /* font-family: "Helvetica Neue", sans-serif; */
     background-color: #010a01;
     cursor: url("../Asserts/cursor.png"), auto;
 

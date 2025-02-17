@@ -59,6 +59,7 @@ font-weight:900;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 40px;
 }
 .inner-display-right{
     padding: 50px;
@@ -111,6 +112,7 @@ font-weight:900;
     font-size: 20px;
     background-color: rgb(12, 233, 233);
     border: none;
+    cursor: pointer;
 }
 .buy-now{
     transition: 0.3s;
@@ -118,9 +120,11 @@ font-weight:900;
 
 }
 .buy-now button:hover{
-    background-color: rgb(109, 242, 231);
+    background-color: rgb(132, 255, 244);
     border-radius: 6px;
     font-size: 20px;
+    cursor: pointer;
+
 
 }
 
@@ -142,6 +146,8 @@ font-weight:900;
     background-color: rgb(197, 197, 197);
     border-radius: 6px;
     font-size: 20px;
+    cursor: pointer;
+
 
 }
 
@@ -163,6 +169,8 @@ font-weight:900;
     background-color: rgb(197, 197, 197);
     border-radius: 6px;
     font-size: 20px;
+    cursor: pointer;
+
 
 }
 
@@ -175,4 +183,80 @@ font-weight:900;
 }
 .inner-price p:hover{
     color: aqua;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    border-radius: 16px;
+    border: none;
+    border: 2px solid rgb(0, 34, 255);
+    width: 500px;
+    height: 600px;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.cancelns img{
+    margin-left: 400px;
+    width: 40px;
+    height: 40px;
+}
+.contact-right{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+
+}
+.contact-right label{
+color: white;
+font-size: 22px;
+font-weight: 500;
+}
+.contact-right input{
+    border: none;
+    width: 430px;
+    height: 55px;
+    padding-left: 20px;
+    border-radius: 8px;
+    background: #444447;
+    color: #a0a0a0;
+    font-family:monospace;
+    font-size: 22px;
+
+}
+.payment-btn{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    font-size: 25px;
+    background-color: aquamarine;
+    color: #000;
+    height: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 2px solid transparent;
+    margin-left: 170px;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.button{
+margin-left:157px ;
 }
