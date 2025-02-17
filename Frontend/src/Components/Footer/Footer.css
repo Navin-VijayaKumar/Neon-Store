@@ -3,6 +3,7 @@
     height: 600px;
     background-color: #414341;
     margin-bottom: 0;
+
     
 }
 .footer-heading{
@@ -15,7 +16,6 @@
     justify-content: center;
    font-family:sans-serif;
     width: 96%;
-    height: 600px;
     line-height: 40px;
 }
 .footer-img img{

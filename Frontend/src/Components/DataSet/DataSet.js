@@ -5,7 +5,7 @@ import gowTI from './Images/gowtI.png';
 const all_product = [
     {
         id: 1,
-        name: "Intel Core i7-13700K Desktop Processor 16 cores",
+        name: "cores",
         image: g1,
         longImage: gowLI,
         category: "cpu",
@@ -33,7 +33,7 @@ const all_product = [
     },
     {
         id: 2,
-        name: "Intel Core i7-13700K Desktop Processor 16 cores",
+        name: "I",
         image: g1,
         category: "cpu",
         longImage: gowLI,
@@ -117,7 +117,7 @@ const all_product = [
     },
     {
         id:5,
-        name: "Intel Core i7-13700K Desktop Processor 16 cores",
+        name: "GOD OF WAR",
         image: g1,
         longImage: gowLI,
         gameDes:"Kratos is a father again. As mentor and protector to Atreus, a son determined to earn his respect, he is forced to deal with and control the rage that has long defined him while out in a very dangerous world with his son.His vengeance against the Gods of Olympus behind him, Kratos now lives in the realm of Norse deities and monsters.",
