@@ -6,6 +6,7 @@ import ageL from '../Asserts/ageL.png'
 import Rating from '../Rating/Rating.jsx';
 import SystemReq from '../SystemReq/SystemReq.jsx';
 import cancelns from '../Asserts/cancelns.png'
+import gpay1 from '../Asserts/gpay1.png'
 const ProductDisplay = () => {
     const { all_product } = useContext(AppContext);
     const { productID } = useParams();
@@ -122,10 +123,12 @@ const ProductDisplay = () => {
   <input type="hidden" name="message" value="Booking request for:" />
 
   <div className="btn-con">
-    <button type="button" className="payment-btn">Pay</button>
+    <div className="payment-btn">
+      <img src={gpay1}></img>
+      </div>
   </div>
 
-  <button className="button" type="submit">Book Now</button>
+  <button className="payment" type="submit">Download</button>
 </form>
 
 

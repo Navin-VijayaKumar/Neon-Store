@@ -232,31 +232,35 @@ font-weight: 500;
     height: 55px;
     padding-left: 20px;
     border-radius: 8px;
-    background: #444447;
+    background: #444444;
     color: #a0a0a0;
     font-family:monospace;
     font-size: 22px;
 
 }
-.payment-btn{
+.payment{
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80px;
+    width: 120px;
     font-size: 25px;
     background-color: aquamarine;
     color: #000;
-    height: 40px;
+    height: 45px;
+    border: 2px solid black;
     margin-top: 30px;
     margin-bottom: 30px;
-    border: 2px solid transparent;
     margin-left: 170px;
     border: none;
     cursor: pointer;
     border-radius: 12px;
 }
 
-.button{
-margin-left:157px ;
+.payment-btn img{
+    margin-left: 180px;
+    margin-top: 25px;
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
 }

@@ -33,7 +33,7 @@ const Navbar = () => {
        </ul>
    
 <div className="setting">
-<Link to='/slider'>
+<Link to='/cart'>
 
         <img src={search2}></img>
         </Link>

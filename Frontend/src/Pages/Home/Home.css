@@ -28,3 +28,56 @@ body{
 .search.hidden{
   display: none;
 }
+.home-title 
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-title h2{
+  top: 30%;
+  left: 5%;
+  position: absolute;
+  color: white;
+}
+
+.shop-now {
+  position: absolute;
+  top: 15%;
+  right: 2%;
+  transition: 0.5s;
+}
+.shop-now p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 50px;
+  width: 154px;
+  border: 2px solid black;
+  background-image: linear-gradient(to right, rgb(190, 9, 175), rgb(35, 185, 152));
+  border-radius: 12px;
+  font-weight: 500;
+  font-family: monospace;
+  color: #000;
+  font-size: 25px;
+  transition: 0.5s;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.shop-now:hover {
+  font-size: 25px;
+  border-radius: 12px;
+
+
+  transform: scale(1.05);
+}
+.shop-now p:hover
+{
+  background-image: linear-gradient(to right, rgb(25, 195, 166), rgb(190, 49, 176));
+
+  color: rgb(223, 218, 218);
+  
+
+}
