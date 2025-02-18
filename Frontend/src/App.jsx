@@ -10,6 +10,7 @@ import Slider from './Components/Slider/Slider'
 import ProductDisplay from './Components/ProductDisplay/ProductDisplay'
 import Footer from './Components/Footer/Footer'
 import Buy from'./Components/Buy/Buy'
+import Cart from './Components/Cart/Cart'
 function App() {
   // <Link to='/'><li>Home</li></Link> 
   // <Link to='/news'><li>News</li></Link> 
@@ -24,7 +25,7 @@ function App() {
       <Route path='/contact' element={<Contact></Contact>}> </Route>
       <Route path='/about' element={<About></About>}> </Route>
       <Route path='/login' element={<Login></Login>}> </Route>
-      <Route path='/buy' element={<Buy></Buy>}> </Route>
+      <Route path='/cart' element={<Cart></Cart>}> </Route>
       <Route path='/slider'element={<Slider></Slider>}> </Route>
       <Route path='/product/:productID'element={<ProductDisplay></ProductDisplay>}> </Route>
     </Routes>
