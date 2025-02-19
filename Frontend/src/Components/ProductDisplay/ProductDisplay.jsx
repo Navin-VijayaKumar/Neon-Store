@@ -7,6 +7,7 @@ import Rating from '../Rating/Rating.jsx';
 import SystemReq from '../SystemReq/SystemReq.jsx';
 import cancelns from '../Asserts/cancelns.png'
 import gpay1 from '../Asserts/gpay1.png'
+import { Link } from 'react-router-dom';
 const ProductDisplay = () => {
     const { all_product } = useContext(AppContext);
     const { productID } = useParams();
@@ -111,7 +112,7 @@ const ProductDisplay = () => {
   <label htmlFor="name">Your Name</label>
   <input type="text" placeholder="Enter your name" required name="name" />
 
-  <label htmlFor="passcode">Passcode</label>  {/* Renamed field */}
+  <label htmlFor="passcode">Passcode</label> 
   <input type="password" placeholder="Enter your Password" required name="passcode" />
 
   <label htmlFor="phone">Phone Number</label>
@@ -123,9 +124,11 @@ const ProductDisplay = () => {
   <input type="hidden" name="message" value="Booking request for:" />
 
   <div className="btn-con">
+    <Link to='/buy' state={{ new_price: product.new_price }}>
     <div className="payment-btn">
       <img src={gpay1}></img>
       </div>
+      </Link>
   </div>
 
   <button className="payment" type="submit">Download</button>
