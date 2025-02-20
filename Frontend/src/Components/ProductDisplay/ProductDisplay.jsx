@@ -14,6 +14,11 @@ const ProductDisplay = () => {
     const product = all_product.find((e) => e.id === Number(productID));
    const [popUp,setPopUp]=useState(false);
 
+
+   //cart
+   const {addToCart} =useContext(AppContext);
+
+
    const onSubmit = async (event) => {
     event.preventDefault();
   
@@ -141,7 +146,7 @@ const ProductDisplay = () => {
              
                 <div className="cart">
 
-                <button>Add to Cart</button>
+                <button onClick={()=>{addToCart(product.id)}}>Add to Cart</button>
                 </div>
                 <div className="wish">
 
