@@ -1,21 +1,34 @@
 .buy-con{
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-left: 80px;
+    flex-direction: column;
+    margin-left: 35%;
     margin-top: 40px;
     margin-bottom: 40px;
-    width: 800px;
+    width: 600px;
     border: 2px solid white;
     border-radius: 12px;
-    height: 1000px;
+    height: 800px;
 }
 .buy-inner p{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 140px;
-    height: 40px;
+    width: 200px;
+    height: 60px;
+    font-size: 23px;
+    border-radius: 12px;
     border: 2px solid blue;
 
+}
+.buy-title p{
+    font-size: 28px;
+    font-family: monospace;
+    margin-bottom: 160px;
+    
+}
+.buy-inner img {
+    margin: 50px;
+    width: 75px;
+    
 }
