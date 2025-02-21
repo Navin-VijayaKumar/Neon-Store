@@ -2,50 +2,64 @@ import React, { useContext, useState } from "react";
 import "./Cart.css";
 import { AppContext } from "../../ContextProvider/ContextProvider";
 import cancelns from '../Asserts/cancelns.png';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import gpay1 from '../Asserts/gpay1.png';
-import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
-  const navigate = useNavigate(); // Use navigate instead of <Link>
-  const { all_product, cartItem, removeFromCart } = useContext(AppContext);
+  const navigate = useNavigate();
+  const { all_product, cartItem, removeFromCart, setCartItem } = useContext(AppContext);
   const [popUp, setPopUp] = useState(false);
 
   const getTotalCartAmount = () => {
-    return all_product.reduce((total, e) => {
-      return total + (e.new_price * (cartItem[e.id] || 0));
-    }, 0);
+    return all_product.reduce((total, e) => total + (e.new_price * (cartItem[e.id] || 0)), 0);
   };
 
   const totalPrice = getTotalCartAmount();
   history.pushState({ totalPrice }, "", window.location.href);
 
+  const addToCart = (id) => {
+    setCartItem((prev) => ({
+      ...prev,
+      [id]: 1, // Ensure the quantity remains 1
+    }));
+  };
+
   const onSubmit = async (event) => {
     event.preventDefault();
-  
+
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData);
 
-    const selectedProduct = all_product.find(e => cartItem[e.id] > 0);
-  
-    if (!selectedProduct) {
+    const selectedProducts = all_product
+      .filter(e => cartItem[e.id] > 0)
+      .map(e => ({
+        name: e.name,
+        price: e.new_price,
+        quantity: 1,
+      }));
+
+    if (selectedProducts.length === 0) {
       alert("No product found in cart!");
       return;
     }
-  
-    data.product_name = selectedProduct.name;
-    data.product_price = totalPrice; 
+
+    const productDetails = selectedProducts
+      .map(p => `${p.name} - ₹${p.price}`)
+      .join(", ");
+
+    data.products = productDetails;
+    data.total_price = totalPrice;
     data.access_key = "a8cf2cad-503d-4abc-8d1a-335fd6ad347d";
-  
+
     if (data.password) {
       data.passcode = data.password;
       delete data.password;
     }
-  
+
     if (!data.message) {
-      data.message = `Booking request from ${data.name}`;
+      data.message = `Booking request from ${data.name}\nProducts: ${productDetails}\nTotal Price: ₹${totalPrice}`;
     }
-  
+
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -55,14 +69,12 @@ const Cart = () => {
         },
         body: JSON.stringify(data),
       });
-  
+
       const result = await response.json();
-  
+
       if (result.success) {
         console.log("Success:", result);
         alert(result.message);
-
-        // Navigate to buy page AFTER successful submission
         navigate("/buy", { state: { new_price: totalPrice } });
 
       } else {
@@ -126,7 +138,6 @@ const Cart = () => {
             </div>
           </div>
 
-          {/* Open Popup */}
           <button onClick={() => setPopUp(true)}>Buy Now</button>
 
           {popUp && (
@@ -158,7 +169,7 @@ const Cart = () => {
                   </div>
                   <input type="hidden" name="message" value="Booking request for:" />
 
-                  <button className="payment1" type="submit">Proceed to Payment</button>
+                  <button className="payment1" type="submit">Download</button>
                 </form>
               </div>
             </div>
