@@ -2,7 +2,7 @@ import React, { Component, createRef } from 'react';
 import './Home.css';
 import search2 from '../AssertsPage/search2.png';
 import { Link } from 'react-router-dom';
-
+import gamepad from '../AssertsPage/gamepad.png'
 export class Home extends Component {
   vantaEffect = null;
   vantaRef = createRef();
@@ -54,7 +54,7 @@ export class Home extends Component {
 
   render() {
     return (
-      <div>
+      <div className='all-timeline'>
         {/* Vanta effect container */}
         <div ref={this.vantaRef} className="vanta-container" style={{ height: '100vh', width: '100%' }}></div>
 
@@ -71,8 +71,78 @@ export class Home extends Component {
           <p>Shop Now</p>
         </div>
         </Link>
+        <div className="all-timeline1">
+
+        <div className="timeline">
+          <div className="container1 l">
+          <img src={gamepad}></img>
+            <div className="text-box">
+              <h2>meerfv1</h2>
+              <small>2018 -2025</small>
+              <p>fhhhhhhhhhhhhhhhhhhhhhjbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbhhhhhhhhhhhhwueopiggggggggggggggggg </p>
+             <span className='left-con-arrow'></span>
+            </div>
+          </div>
+          <div className="container1 r">
+          <img src={gamepad}></img>
+
+            <div className="text-box">
+              <h2>meerfv2</h2>
+              <small>2018 -2025</small>
+              <p>fhhhhhhhhhhhhhhhhhhhhhjbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbhhhhhhhhhhhhwueopiggggggggggggggggg </p>
+              <span className='right-con-arrow'></span>
+
+            </div>
+          </div>
+          <div className="container1 l">
+          <img src={gamepad}></img>
+            <div className="text-box">
+              <h2>meerfv1</h2>
+              <small>2018 -2025</small>
+              
+              <p>fhhhhhhhhhhhhhhhhhhhhhjbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbhhhhhhhhhhhhwueopiggggggggggggggggg </p>
+              <span className='left-con-arrow'></span>
+
+            </div>
+          </div>
+          <div className="container1 r">
+          <img src={gamepad}></img>
+
+            <div className="text-box">
+              <h2>meerfv2</h2>
+              <small>2018 -2025</small>
+               
+               <p>fhhhhhhhhhhhhhhhhhhhhhjbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbhhhhhhhhhhhhwueopiggggggggggggggggg </p>
+               <span className='right-con-arrow'></span>
+
+            </div>
+          </div>
+          <div className="container1 l">
+          <img src={gamepad}></img>
+
+            <div className="text-box">
+              <h2>meerfv3</h2>
+              <small>2018 -2025</small>
+            
+              <p>fhhhhhhhhhhhhhhhhhhhhhjbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbhhhhhhhhhhhhwueopiggggggggggggggggg </p>
+              <span className='left-con-arrow'></span>
+
+            </div>
+          </div>
+          <div className="container1 r">
+          <img src={gamepad}></img>
+            <div className="text-box">
+              <h2>meerfv4</h2>
+              <small>2018 -2025</small>
+              <p>fhhhhhhhhhhhhhhhhhhhhhjbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbhhhhhhhhhhhhwueopiggggggggggggggggg </p>
+              <span className='right-con-arrow'></span>
+
+            </div>
+          </div>
+        </div>
        
       </div>
+        </div>
     );
   }
 }
