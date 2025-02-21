@@ -3,15 +3,76 @@ import "./Cart.css";
 import { AppContext } from "../../ContextProvider/ContextProvider";
 import cancelns from '../Asserts/cancelns.png';
 import { Link } from "react-router-dom";
-const Cart = () => {
-  const { all_product, cartItem, removeFromCart } = useContext(AppContext);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+import gpay1 from '../Asserts/gpay1.png';
+import { useNavigate } from "react-router-dom";
 
-  // Function to calculate total cart amount
+const Cart = () => {
+  const navigate = useNavigate(); // Use navigate instead of <Link>
+  const { all_product, cartItem, removeFromCart } = useContext(AppContext);
+  const [popUp, setPopUp] = useState(false);
+
   const getTotalCartAmount = () => {
     return all_product.reduce((total, e) => {
-      return total + e.new_price * cartItem[e.id];
+      return total + (e.new_price * (cartItem[e.id] || 0));
     }, 0);
+  };
+
+  const totalPrice = getTotalCartAmount();
+  history.pushState({ totalPrice }, "", window.location.href);
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+  
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData);
+
+    const selectedProduct = all_product.find(e => cartItem[e.id] > 0);
+  
+    if (!selectedProduct) {
+      alert("No product found in cart!");
+      return;
+    }
+  
+    data.product_name = selectedProduct.name;
+    data.product_price = totalPrice; 
+    data.access_key = "a8cf2cad-503d-4abc-8d1a-335fd6ad347d";
+  
+    if (data.password) {
+      data.passcode = data.password;
+      delete data.password;
+    }
+  
+    if (!data.message) {
+      data.message = `Booking request from ${data.name}`;
+    }
+  
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+  
+      const result = await response.json();
+  
+      if (result.success) {
+        console.log("Success:", result);
+        alert(result.message);
+
+        // Navigate to buy page AFTER successful submission
+        navigate("/buy", { state: { new_price: totalPrice } });
+
+      } else {
+        console.error("Error:", result);
+        alert(result.message || "Submission failed.");
+      }
+    } catch (error) {
+      console.error("Fetch Error:", error);
+      alert("Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -31,7 +92,7 @@ const Cart = () => {
           return (
             <div key={e.id}>
               <div className="cartitems-format cartitems-main">
-                <img src={e.image} alt="" className="cartitem-icon" />
+                <img src={e.image} alt={e.name} className="cartitem-icon" />
                 <p>{e.name}</p>
                 <p> ₹{e.new_price}</p>
                 <p>{e.rating}</p>
@@ -39,7 +100,6 @@ const Cart = () => {
                 <img
                   className="remove"
                   src={cancelns}
-  
                   onClick={() => removeFromCart(e.id)}
                   alt="Delete Item"
                 />
@@ -57,22 +117,54 @@ const Cart = () => {
           <div>
             <div className="cartitem-total-items">
               <p>Subtotal</p>
-              <p> ₹{getTotalCartAmount()}</p>
+              <p> ₹{totalPrice}</p>
             </div>
             <hr />
-           
             <div className="cartitem-total-items">
               <h3>Total</h3>
-              <h3> ₹{getTotalCartAmount()}</h3>
+              <h3> ₹{totalPrice}</h3>
             </div>
           </div>
-          <Link to='/buy' state={{ new_price: getTotalCartAmount }}>
 
-          <button >Proceed To Checkout</button>
-          </Link>
+          {/* Open Popup */}
+          <button onClick={() => setPopUp(true)}>Buy Now</button>
+
+          {popUp && (
+            <div className="popup-overlay">
+              <div className="popup-content">
+                <div className="cancelns">
+                  <div onClick={() => setPopUp(false)}>
+                    <img src={cancelns} alt="Close" />
+                  </div>
+                </div>
+                <form onSubmit={onSubmit} className="contact-right">
+                  <label htmlFor="name">Your Name</label>
+                  <input type="text" placeholder="Enter your name" required name="name" />
+
+                  <label htmlFor="passcode">Passcode</label>
+                  <input type="password" placeholder="Enter your Password" required name="passcode" />
+
+                  <label htmlFor="phone">Phone Number</label>
+                  <input type="tel" placeholder="Enter your Phone Number" required name="phone" pattern="[0-9]{10}" />
+
+                  <label htmlFor="email">Your Email</label>
+                  <input type="email" placeholder="Enter your email" required name="email" />
+                  <div className="btn-con">
+                    <Link to='/buy' state={{ new_price: totalPrice }}>
+                      <div className="payment-btn">
+                        <img src={gpay1} alt="GPay" />
+                      </div>
+                    </Link>
+                  </div>
+                  <input type="hidden" name="message" value="Booking request for:" />
+
+                  <button className="payment1" type="submit">Proceed to Payment</button>
+                </form>
+              </div>
+            </div>
+          )}
         </div>
       </div>
-
     </div>
   );
 };
