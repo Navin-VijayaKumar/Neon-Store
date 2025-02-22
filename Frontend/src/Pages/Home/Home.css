@@ -68,8 +68,8 @@ body{
 
 
 .shop-now {
-  position: absolute;
-  top: 15%;
+  position: fixed;
+  top: 13%;
   right: 2%;
   transition: 0.5s;
 }
@@ -158,7 +158,7 @@ body{
   background-color: white;
   color: #000;
   position: relative;
-  font-size: 15px;
+  font-size: 17px;
   border-radius: 6px;
   max-width: 100%; 
   word-wrap: break-word; 
