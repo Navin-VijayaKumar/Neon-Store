@@ -71,7 +71,7 @@ const productSchema = new mongoose.Schema({
 
 const Product = mongoose.model("Product", productSchema);
 app.post('/addproduct', async (req, res) => {
-    console.log("Received product data:", req.body); // Debugging
+    console.log("Received product data:", req.body);
 
     let products = await Product.find({});
     let id = products.length > 0 ? products[products.length - 1].id + 1 : 1;
