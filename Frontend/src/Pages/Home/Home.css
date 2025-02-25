@@ -70,7 +70,7 @@ body{
 .shop-now {
   position: fixed;
   top: 13%;
-  right: 2%;
+  right: 1%;
   transition: 0.5s;
 }
 .shop-now p {
@@ -79,7 +79,7 @@ body{
   justify-content: center;
   box-sizing: border-box;
   height: 50px;
-  width: 154px;
+  width: 145px;
   border: 2px solid black;
   background-image: linear-gradient(to right, rgb(190, 9, 175), rgb(35, 185, 152));
   border-radius: 12px;
@@ -264,3 +264,4 @@ body{
 
   
 }
+/* -------------------------- */

@@ -1,0 +1,47 @@
+.imageslider{
+    padding-bottom:100px;
+    padding-top: 100px;
+}
+.carousel {
+    position: relative;
+    width: 1600px; /* Increase width */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    
+}
+  
+.carousel-container {
+    display: flex;
+    width: 100%; /* Make it fill the .carousel */
+    transition: transform 0.5s ease-in-out;
+}
+  
+.carousel-image {
+    width: 100%; /* Make it responsive */
+    height: 900px; /* Increase height */
+    object-fit: cover;
+    border-radius: 10px;
+}
+  
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 30%;
+}
+  
+.prev { left: 10px; }
+.next { right: 10px; }
+  
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}

@@ -3,6 +3,7 @@ import './Home.css';
 import search2 from '../AssertsPage/search2.png';
 import { Link } from 'react-router-dom';
 import gamepad from '../AssertsPage/gamepad.png'
+import ImageSlider from '../ImageSlider/ImageSlider';
 export class Home extends Component {
   vantaEffect = null;
   vantaRef = createRef();
@@ -139,8 +140,12 @@ export class Home extends Component {
 
             </div>
           </div>
+
         </div>
        
+      </div>
+      <div className="div">
+        <ImageSlider></ImageSlider>
       </div>
         </div>
     );
