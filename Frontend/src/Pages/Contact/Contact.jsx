@@ -1,8 +1,15 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <div className="contact-con">
+       <Link to='/slider'>
+        
+        <div className="shop-now-sec">
+          <p>Shop Now</p>
+        </div>
+        </Link>
+    </div>
   )
 }
 

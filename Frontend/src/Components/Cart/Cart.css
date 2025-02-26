@@ -317,3 +317,45 @@ font-weight: 500;
   margin-left: 75px;
 
 }
+
+.shop-now-cart {
+  position: absolute;
+  top: 10%;
+  left: 92%;
+  transition: 0.5s;
+  padding-top: 25px;
+}
+.shop-now-cart p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 50px;
+  width: 144px;
+  border: 2px solid black;
+  background-image: linear-gradient(to right, rgb(190, 9, 175), rgb(35, 185, 152));
+  border-radius: 12px;
+  font-weight: 500;
+  font-family: monospace;
+  color: #000;
+  font-size: 25px;
+  transition: 0.8s;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.shop-now-cart:hover {
+  font-size: 25px;
+  border-radius: 12px;
+
+
+  transform: scale(1.05);
+}
+.shop-now-cart p:hover
+{
+  background-image: linear-gradient(to right, rgb(25, 195, 166), rgb(190, 49, 176));
+
+  color: rgb(223, 218, 218);
+  
+
+}

@@ -89,6 +89,12 @@ const Cart = () => {
 
   return (
     <div className="cartitems">
+       <Link to='/slider'>
+              
+              <div className="shop-now-cart">
+                <p>Shop Now</p>
+              </div>
+              </Link>
       <div className="cartitems-main">
         <p>Product</p>
         <p>Title</p>
