@@ -1,6 +1,9 @@
 .imageslider{
-    padding-bottom:100px;
-    padding-top: 100px;
+    padding-bottom:200px;
+    padding-top: 140px;
+    padding-right: 20px;
+    background-color: rgb(148, 155, 150);
+
 }
 .carousel {
     position: relative;

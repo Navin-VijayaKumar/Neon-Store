@@ -70,7 +70,7 @@ body{
 .shop-now {
   position: fixed;
   top: 13%;
-  right: 1%;
+  right: 0.5%;
   transition: 0.5s;
 }
 .shop-now p {
@@ -79,7 +79,7 @@ body{
   justify-content: center;
   box-sizing: border-box;
   height: 50px;
-  width: 145px;
+  width: 144px;
   border: 2px solid black;
   background-image: linear-gradient(to right, rgb(190, 9, 175), rgb(35, 185, 152));
   border-radius: 12px;
@@ -112,7 +112,8 @@ body{
 .timeline{
   position: relative;
   max-width: 1200px;
-  margin: 100px auto;
+  margin: auto;
+  padding-top: 30px;
 
 }
 .container1{
@@ -263,5 +264,11 @@ body{
   }
 
   
+}
+.all-timeline1{
+  position: relative;
+  background-color: rgb(148, 155, 150);
+  z-index: 1;
+
 }
 /* -------------------------- */
