@@ -1,5 +1,4 @@
 import React, { useEffect, useState, createContext } from "react";
-import DataSet from "../Components/DataSet/DataSet.js";
 
 export const AppContext = createContext(null);
 
@@ -21,16 +20,16 @@ const ContextProvider = (props) => {
   const removeFromCart=(itemId)=>{
     setCartItem((prev)=>({...prev,[itemId]:prev[itemId]-1}))
   }
+
+
   useEffect(() => {
-    setAllProduct(DataSet); 
+    fetch('http://localhost:4000/allproducts')
+      .then((response) => response.json())
+      .then((data) => setAllProduct(data))
+      .catch((error) => console.error('Error fetching products:', error));
   }, []);
-
-  useEffect(() => {
-    setCartItem(getDefaultCart(all_product));
-  }, [all_product]);
-
+  console.log(all_product);
   const contextValue = { all_product, cartItem, addToCart,removeFromCart};
-  console.log(cartItem)
   return (
     <AppContext.Provider value={contextValue}>
       {props.children}
