@@ -1,0 +1,39 @@
+
+.control-panel{
+    margin: 0;
+    
+}
+.adminimg{
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    right: 1rem;
+}
+.navAdmin{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-top: 10px;
+    top: 1rem;
+
+   
+}
+.adminimg{
+    position: absolute;
+    top: 30px;
+    right: 1rem;
+
+}
+.admintext{
+    position: absolute;
+    top: 10px;
+   
+
+}
+.custom-hr {
+    border: 1px solid black;
+    margin: 60px auto;
+    width: 100%; 
+  }
+ 

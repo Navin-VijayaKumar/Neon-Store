@@ -12,6 +12,8 @@ import Footer from './Components/Footer/Footer'
 import Buy from'./Components/Buy/Buy'
 import Cart from './Components/Cart/Cart'
 import LoginSignUp from './Pages/Auth/LoginSignUp'
+import Addproduct from '../../Admin/Component/Addproduct/Addproduct'
+import Display from '../../Admin/Component/Display/Display'
 function App() {
   // <Link to='/'><li>Home</li></Link> 
   // <Link to='/news'><li>News</li></Link> 
@@ -29,6 +31,8 @@ function App() {
       <Route path='/cart' element={<Cart></Cart>}> </Route>
       <Route path='/buy' element={<Buy></Buy>}> </Route>
       <Route path='/slider'element={<Slider></Slider>}> </Route>
+      <Route path='/addproduct'element={<Addproduct></Addproduct>}> </Route>
+      <Route path='/display'element={<Display></Display>}> </Route>
       <Route path='/product/:productID'element={<ProductDisplay></ProductDisplay>}> </Route>
     </Routes>
     <Footer></Footer>

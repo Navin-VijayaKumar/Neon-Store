@@ -130,6 +130,15 @@
 
 
 }
+.remove1{
+  width: 50px;
+  height: 50px;
+  
+}
+.cartitems-main{
+  display: flex;
+  gap: 180px;
+}
 /* Modal Styles */
 .modal {
     display: flex;

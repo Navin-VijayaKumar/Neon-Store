@@ -7,7 +7,7 @@ import gpay1 from '../Asserts/gpay1.png';
 
 const Cart = () => {
   const navigate = useNavigate();
-  const { all_product, cartItem, removeFromCart, setCartItem } = useContext(AppContext);
+  const { all_product, cartItem, addToCart, removeFromCart } = useContext(AppContext);
   const [popUp, setPopUp] = useState(false);
 
   const getTotalCartAmount = () => {
@@ -16,13 +16,6 @@ const Cart = () => {
 
   const totalPrice = getTotalCartAmount();
   history.pushState({ totalPrice }, "", window.location.href);
-
-  const addToCart = (id) => {
-    setCartItem((prev) => ({
-      ...prev,
-      [id]: 1, // Ensure the quantity remains 1
-    }));
-  };
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -35,7 +28,7 @@ const Cart = () => {
       .map(e => ({
         name: e.name,
         price: e.new_price,
-        quantity: 1,
+        quantity: cartItem[e.id], // Correct quantity
       }));
 
     if (selectedProducts.length === 0) {
@@ -44,17 +37,12 @@ const Cart = () => {
     }
 
     const productDetails = selectedProducts
-      .map(p => `${p.name} - ₹${p.price}`)
+      .map(p => `${p.name} - ₹${p.price} (x${p.quantity})`)
       .join(", ");
 
     data.products = productDetails;
     data.total_price = totalPrice;
     data.access_key = "a8cf2cad-503d-4abc-8d1a-335fd6ad347d";
-
-    if (data.password) {
-      data.passcode = data.password;
-      delete data.password;
-    }
 
     if (!data.message) {
       data.message = `Booking request from ${data.name}\nProducts: ${productDetails}\nTotal Price: ₹${totalPrice}`;
@@ -89,12 +77,12 @@ const Cart = () => {
 
   return (
     <div className="cartitems">
-       <Link to='/slider'>
-              
-              <div className="shop-now-cart">
-                <p>Shop Now</p>
-              </div>
-              </Link>
+      <Link to='/slider'>
+        <div className="shop-now-cart">
+          <p>Shop Now</p>
+        </div>
+      </Link>
+
       <div className="cartitems-main">
         <p>Product</p>
         <p>Title</p>
@@ -116,11 +104,13 @@ const Cart = () => {
                 <p>{e.rating}</p>
                 <p> ₹{e.new_price * cartItem[e.id]}</p>
                 <img
-                  className="remove"
+                  className="remove1"
                   src={cancelns}
                   onClick={() => removeFromCart(e.id)}
                   alt="Delete Item"
                 />
+                <div onClick={() => addToCart(e.id)}></div>
+                <div onClick={() => removeFromCart(e.id)}></div>
               </div>
               <hr />
             </div>
@@ -155,17 +145,18 @@ const Cart = () => {
                   </div>
                 </div>
                 <form onSubmit={onSubmit} className="contact-right">
-                  <label htmlFor="name">Your Name</label>
+                  <label>Your Name</label>
                   <input type="text" placeholder="Enter your name" required name="name" />
 
-                  <label htmlFor="passcode">Passcode</label>
+                  <label>Passcode</label>
                   <input type="password" placeholder="Enter your Password" required name="passcode" />
 
-                  <label htmlFor="phone">Phone Number</label>
+                  <label>Phone Number</label>
                   <input type="tel" placeholder="Enter your Phone Number" required name="phone" pattern="[0-9]{10}" />
 
-                  <label htmlFor="email">Your Email</label>
+                  <label>Your Email</label>
                   <input type="email" placeholder="Enter your email" required name="email" />
+
                   <div className="btn-con">
                     <Link to='/buy' state={{ new_price: totalPrice }}>
                       <div className="payment-btn">
@@ -173,7 +164,6 @@ const Cart = () => {
                       </div>
                     </Link>
                   </div>
-                  <input type="hidden" name="message" value="Booking request for:" />
 
                   <button className="payment1" type="submit">Download</button>
                 </form>
