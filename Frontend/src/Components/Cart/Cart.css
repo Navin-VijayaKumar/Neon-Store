@@ -1,23 +1,29 @@
-.cartitems{
-    margin: 100px 170px;
-
+.carttiemsmap{
+  position: relative;
+  padding-top: 180px;
+  margin-left: 40px;
 }
 .cartitems hr{
-    height: 3px;
-    background-color: rgb(255, 255, 255);
-    border: 0;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  border: 0;
+  
 
+}
+.cartitems{
+  background-color: rgb(30, 33, 31);
 
 }
 .cartitems-main{
-    display: grid;
-    grid-template-columns:0.5fr 2fr 1fr 1fr 1fr 1fr;
-    align-items: center;
-    gap: 75px;
-    font-weight: 600;
-    padding: 20px 0px;
-    color: rgb(255, 255, 255);
-    font-size: 16px;
+  display: grid;
+  grid-template-columns:0.5fr 2fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 75px;
+  font-weight: 600;
+  padding: 20px 0px;
+  color: rgb(255, 255, 255);
+  font-size: 23px;
+
 
 }
 .cartitems-format{
@@ -45,15 +51,17 @@
 }
 .cartitems-down{
     display: flex;
-    margin: 100px 0px;
+    padding: 40px;
 
 
 }
 .cartitem-total{
     float: 1;
+    margin-left: 40px;
     display: flex;
     flex-direction: column;
     margin-right: 200px;
+    color: #ffffff;
     gap:40px;
 
 
@@ -70,7 +78,7 @@
     outline: none;
     border: none;
     background-color: red;
-    color: aliceblue;
+    color: rgb(255, 255, 255);
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
@@ -93,7 +101,7 @@
     margin-top: 15px;
     padding-left: 20px;
     height: 58px;
-    background-color: #9c9898;
+    background-color: #000000;
     
 
 }
@@ -116,7 +124,7 @@
     font-size: 16px;
     background-color: rgb(255, 255, 255);
     cursor: pointer;
-    color: white;
+    color: rgb(255, 255, 255);
     border: none;
 
 
@@ -163,7 +171,7 @@
   }
   
   .close {
-    color: #aaa;
+    color: #ffffff;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -171,7 +179,7 @@
   
   .close:hover,
   .close:focus {
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     cursor: pointer;
   }
@@ -211,7 +219,7 @@
     padding: 10px;
     margin-left: 70px;
     background-color: #ff0000;
-    color: white;
+    color: rgb(255, 255, 255);
     align-items: center;
     justify-content: center;
     border: none;
@@ -230,7 +238,7 @@
   
   .submit-btn:hover {
     background-color: #ffbcbc;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     transform: scale(1.05);
     font-size: 18px;
   }
@@ -277,7 +285,7 @@
 
 }
 .contact-right label{
-color: white;
+color: rgb(0, 0, 0);
 font-size: 22px;
 font-weight: 500;
 }
@@ -329,13 +337,15 @@ font-weight: 500;
 
 .shop-now-cart {
   position: absolute;
-  top: 10%;
-  left: 92%;
+  top: 8%;
+  left: 90%;
   transition: 0.5s;
-  padding-top: 25px;
+  padding-top: 15px;
 }
 .shop-now-cart p {
   display: flex;
+  position: relative;
+  z-index: 5;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
@@ -348,19 +358,20 @@ font-weight: 500;
   font-family: monospace;
   color: #000;
   font-size: 25px;
+  position: relative;
   transition: 0.8s;
   transform-origin: center;
   will-change: transform;
 }
 
-.shop-now-cart:hover {
+.shop-now-crt:hover {
   font-size: 25px;
   border-radius: 12px;
 
 
   transform: scale(1.05);
 }
-.shop-now-cart p:hover
+.shop-now-crt p:hover
 {
   background-image: linear-gradient(to right, rgb(25, 195, 166), rgb(190, 49, 176));
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import './News.css'
 import { Link } from 'react-router-dom'
 const News = () => {
   return (

@@ -1,5 +1,8 @@
 import React from 'react'
 import './Slider.css'
+import c12 from '../AdminAssets/c12.png'
+import folder from '../AdminAssets/folder.png'
+
 import { Link } from 'react-router-dom'
 const Slider = () => {
   return (
@@ -8,7 +11,7 @@ const Slider = () => {
         <Link to={'/addproduct'} style={{textDecoration:"none"}}>
         <div className="admin-slider-cart-main">
             <>
-            <img src=''></img>
+            <img src={c12}></img>
             </>
             <>
             <p>Add Product</p>
@@ -18,7 +21,7 @@ const Slider = () => {
         <Link to={'/allproducts'} style={{textDecoration:"none"}}>
         <div className="admin-slider-cart-main">
             <>
-            <img className='uniqimg' src=''></img>
+            <img className='uniqimg' src={folder}></img>
             </>
             <>
             <p>List Products</p>

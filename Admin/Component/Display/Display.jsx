@@ -57,7 +57,7 @@ const Display = () => {
               <div className="listproduct-format-main listproduct-format">
                 <img src={product.image} alt="" className="listproduct-icon" />
                 <p>Id:{product.id}</p>
-                <p>Name:{product.DealerName}</p>
+                <p>Name:{product.name}</p>
                 <p>Category:{product.category}</p>
                 <p>Email:{product.Email}</p> 
                 <p>State:{product.state}</p>

@@ -10,7 +10,7 @@ const Navbar = () => {
     <div className='all'>
 
         <div className="title">
-   <div className="comp">
+
 <div>
 
       <img src={gamel1} className='logo' alt='Logo' />
@@ -19,7 +19,6 @@ const Navbar = () => {
 
       <h2 className='neontext'>Neon Store</h2>
 </div>
-   </div>
       </div>
        
       <ul id="nav-list">

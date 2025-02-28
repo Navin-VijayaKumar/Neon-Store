@@ -3,6 +3,11 @@
     box-sizing: border-box;
 
 }
+.innerDisplay{
+
+    background-color: rgb(30, 33, 31);
+}
+
 .inner-display-img img{
     width: 900px;
     height: 500px;

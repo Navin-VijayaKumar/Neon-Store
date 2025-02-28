@@ -2,12 +2,15 @@ body{
    
     cursor: url("../Asserts/cursor.png"), auto;
 }
-
+.slider{
+    background-color: rgb(30, 33, 31);
+    padding-top: 90px;
+}
 .games {
     width: 300px;
     height: 650px;
     margin-top: 20px;
-    background-color: rgb(41, 41, 41);
+    background-color: rgb(69, 68, 68);
     margin-left: 28px;
     border-radius: 10px;
     margin-top:80px;
@@ -80,7 +83,7 @@ font-weight: 600;
     display: flex;
     align-items: start;
     width: 100%;
-    height: 1250px;
+    height: 1500px;
     margin-bottom: 50px;
    
 
@@ -160,7 +163,7 @@ p{
     width: 185px;
     border-radius: 9px;
     display: flex;
-    color: #000;
+    color: #000000;
     align-items: center;
     justify-content: center;
     height: 40px;
@@ -178,14 +181,14 @@ background-color:  rgb(222, 220, 220);
     grid-template-columns: repeat(4, 1fr);  
     align-items: start;  
     justify-content: center;
-    color: bisque;
-    width: 1500px;
-    height: 1200px;
+    color: rgb(255, 255, 255);
+    width: 1350px;
+    height: 1350px;
     position: absolute;
     margin-left: 330px;
     margin-top: 90px;
     overflow: auto;
-    padding: 30px; 
+    padding: 15px; 
     scrollbar-width: none;
     scroll-behavior: smooth;
 }
@@ -255,7 +258,7 @@ background-color:  rgb(222, 220, 220);
     justify-content: center;
     width: 74px;
     height: 40px;
-    background-color: rgb(0, 212, 245);
+    background-color: rgb(42, 169, 188);
     color: #000;
     font-size: 20px;
     border-radius: 28px;
@@ -285,5 +288,9 @@ font-family:sans-serif;
     font-family: monospace;
     font-size: 25px;
 margin-bottom: 30px;
+
+}
+.item1 p{
+    color: white;
 
 }

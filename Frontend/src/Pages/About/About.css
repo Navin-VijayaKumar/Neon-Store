@@ -2,9 +2,10 @@
 .shop-now-sec {
     position: relative;
     top: 13%;
-    left: 89%;
+    color: #000;
     transition: 0.5s;
     padding: 30px;
+    margin-left: 88%;
   }
   .shop-now-sec p {
     display: flex;
@@ -36,12 +37,19 @@
   {
     background-image: linear-gradient(to right, rgb(25, 195, 166), rgb(190, 49, 176));
   
-    color: rgb(223, 218, 218);
+    color: rgb(0, 0, 0);
     
   
   }
   .about-c{
     font-size: 23px;
+  color: #f3f3f3;
     line-height: 27px;
     font-family: monospace;
+  }
+  .about-con{
+    width: 100%;
+    background-color: rgb(30, 33, 31);
+    padding-top: 80px;
+
   }

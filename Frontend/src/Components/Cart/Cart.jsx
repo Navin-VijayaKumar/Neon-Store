@@ -83,6 +83,7 @@ const Cart = () => {
         </div>
       </Link>
 
+ <div className="carttiemsmap">
       <div className="cartitems-main">
         <p>Product</p>
         <p>Title</p>
@@ -118,6 +119,7 @@ const Cart = () => {
         }
         return null;
       })}
+      </div>
 
       <div className="cartitems-down">
         <div className="cartitem-total">

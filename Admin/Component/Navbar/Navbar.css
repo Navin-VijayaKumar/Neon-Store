@@ -1,7 +1,7 @@
 
 .control-panel{
     margin: 0;
-    
+    margin-top: 80px;
 }
 .adminimg{
     height: 60px;
@@ -31,9 +31,3 @@
    
 
 }
-.custom-hr {
-    border: 1px solid black;
-    margin: 60px auto;
-    width: 100%; 
-  }
- 

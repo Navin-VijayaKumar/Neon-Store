@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Addproduct.css';
-
+import c12 from '../AdminAssets/c12.png'
 const Addproduct = () => {
   const [productDetails, setProductDetails] = useState({
     id: "",
