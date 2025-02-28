@@ -8,6 +8,7 @@ const cors = require("cors");
 
 app.use(express.json());
 app.use(cors());
+app.use("/images", express.static("upload/images"));
 
 
 
@@ -22,19 +23,25 @@ app.get("/", (req, res) => {
     res.send("Express app is running");
     console.log("Express app is running");
 });
-
-// Storage setup for image uploads
 const storage = multer.diskStorage({
-    destination: './upload/images',
+    destination: "./upload/images",
     filename: (req, file, cb) => {
         return cb(null, `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`);
     }
 });
 
 const upload = multer({ storage: storage });
-app.use("/images", express.static('upload/images'));
 
-app.post("/upload", upload.single('product'), (req, res) => {
+app.get("/", (req, res) => {
+    res.send("Express app is running");
+    console.log("Express app is running");
+});
+
+// Image Upload Route
+app.post("/upload", upload.single("image"), (req, res) => {
+    if (!req.file) {
+        return res.status(400).json({ success: 0, message: "No file uploaded" });
+    }
     res.json({
         success: 1,
         image_url: `http://localhost:${port}/images/${req.file.filename}`

@@ -19,6 +19,7 @@ body{
 }
 .sidebar-all{
     width: 250px;
+    padding: 40px;
 }
 .admin-slider-cart-main{
     display: flex;

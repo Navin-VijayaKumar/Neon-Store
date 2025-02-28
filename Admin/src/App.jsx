@@ -12,7 +12,7 @@ const App = () => {
       <Slider />
       <Routes>
         <Route path='/addproduct' element={<Addproduct />} />
-        <Route path='/Display' element={<Display />} />
+        <Route path='/allproducts' element={<Display />} />
       </Routes>
     </>
   );

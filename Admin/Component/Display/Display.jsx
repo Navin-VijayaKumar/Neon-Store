@@ -1,6 +1,6 @@
 import './Display.css';
 import React, { useEffect, useState } from 'react';
-
+import delete1 from '../AdminAssets/delete1.png'
 const Display = () => {
   const [allProducts, setAllProducts] = useState([]);
   const [error, setError] = useState('');
@@ -55,16 +55,15 @@ const Display = () => {
           allProducts.map((product, index) => (
             <React.Fragment key={index}>
               <div className="listproduct-format-main listproduct-format">
-                <img src={product.image} alt="" className="listproduct-icon" />
+                <img src={product.longImage} alt="" className="listproduct-icon" />
                 <p>Id:{product.id}</p>
                 <p>Name:{product.name}</p>
                 <p>Category:{product.category}</p>
-                <p>Email:{product.Email}</p> 
-                <p>State:{product.state}</p>
-
+                <p>Price:{product.new_price}</p> 
+                <p>Offer:{product.offer_percentage}</p>
                 <img
                   onClick={() => removeProduct(product.id)}
-                  src=""
+                  src={delete1}
                   alt="Remove"
                   className="listproduct-remove"
                 />
