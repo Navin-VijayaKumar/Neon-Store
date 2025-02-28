@@ -157,21 +157,73 @@ const AddProduct = () => {
         {Object.keys(productDetails).map((key) =>
           key !== "image" && key !== "longImage" && key !== "gameTitleImg" ? (
             <div className="addproduct-field" key={key}>
-              <p>{key.replace(/([A-Z])/g, " $1").trim()}</p>
+              <label htmlFor={key}>{{
+                id: "Product ID",
+                name: "Product Name",
+                category: "Product Category",
+                gameDes: "Game Description",
+                rating: "Game Rating (1-5)",
+                osMin: "Minimum OS Requirement",
+                osRec: "Recommended OS",
+                proMin: "Minimum Processor",
+                proRec: "Recommended Processor",
+                memoryMin: "Minimum RAM (GB)",
+                memoryRec: "Recommended RAM (GB)",
+                storageMin: "Minimum Storage (GB)",
+                storageRec: "Recommended Storage (GB)",
+                graphicMin: "Minimum Graphics Card",
+                graphicRec: "Recommended Graphics Card",
+                otherMin: "Other Minimum Requirements",
+                otherRec: "Other Recommended Requirements",
+                languages: "Supported Languages",
+                new_price: "New Price ($)",
+                old_price: "Old Price ($)",
+                offer_percentage: "Discount Percentage (%)",
+                age_limit: "Age Limit (e.g., 18+)",
+              }[key]}</label>
               <input
                 value={productDetails[key]}
                 onChange={changeHandler}
                 type="text"
                 name={key}
-                placeholder={`Enter ${key}`}
+                id={key}
+                placeholder={`Enter ${{
+                  id: "Product ID",
+                  name: "Product Name",
+                  category: "Product Category",
+                  gameDes: "Game Description",
+                  rating: "Game Rating (1-5)",
+                  osMin: "Minimum OS Requirement",
+                  osRec: "Recommended OS",
+                  proMin: "Minimum Processor",
+                  proRec: "Recommended Processor",
+                  memoryMin: "Minimum RAM (GB)",
+                  memoryRec: "Recommended RAM (GB)",
+                  storageMin: "Minimum Storage (GB)",
+                  storageRec: "Recommended Storage (GB)",
+                  graphicMin: "Minimum Graphics Card",
+                  graphicRec: "Recommended Graphics Card",
+                  otherMin: "Other Minimum Requirements",
+                  otherRec: "Other Recommended Requirements",
+                  languages: "Supported Languages",
+                  new_price: "New Price ($)",
+                  old_price: "Old Price ($)",
+                  offer_percentage: "Discount Percentage (%)",
+                  age_limit: "Age Limit (e.g., 18+)",
+                }[key]}`}
                 required
               />
             </div>
           ) : (
             <div className="addproduct-field" key={key}>
               <label htmlFor={key}>
-                <p>Upload {key.replace(/([A-Z])/g, " $1").trim()}</p>
-                <input onChange={changeHandler} type="file" name={key} id={key} />
+                <p>Upload {{
+                  image: "Main Product Image",
+                  longImage: "Long Product Image",
+                  gameTitleImg: "Game Title Image",
+                  
+                }[key]}</p>
+                <input onChange={changeHandler} type="file" name={key} id={key}  />
               </label>
               {uploadedImages[key] && <img src={uploadedImages[key]} alt={key} width="100px" />}
             </div>

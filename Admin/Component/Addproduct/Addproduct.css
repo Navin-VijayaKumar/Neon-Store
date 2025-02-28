@@ -94,3 +94,16 @@ body{
     align-items: center;
     justify-content: center;
 }
+.addproduct-field p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+.addproduct-field input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 12px;
+    padding-left: 10px;
+}
