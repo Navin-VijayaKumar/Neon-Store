@@ -28,7 +28,6 @@ const Navbar = () => {
       <Link to='/about'><li>About</li></Link> 
         
        
-    <Link to='/login' > <button className='button'>Login</button>  </Link>
        </ul>
    
 <div className="setting">
