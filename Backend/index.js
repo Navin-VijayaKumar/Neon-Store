@@ -5,24 +5,73 @@ const mongoose = require("mongoose");
 const multer = require("multer");
 const path = require("path");
 const cors = require("cors");
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+
+const SECRET_KEY = "your_secret_key"; // Replace with a strong secret key
 
 app.use(express.json());
 app.use(cors());
 app.use("/images", express.static("upload/images"));
-
-
-
-
 
 mongoose.connect("mongodb+srv://navinv:9788665770@cluster0.y2evh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
 
+// User Schema
+const userSchema = new mongoose.Schema({
+    username: { type: String, required: true },
+    email: { type: String, required: true, unique: true },
+    password: { type: String, required: true },
+    cart: { type: Array, default: [] },
+});
+
+const User = mongoose.model("User", userSchema);
+
+// Signup Route
+app.post("/signup", async (req, res) => {
+    const { username, email, password } = req.body;
+
+    try {
+        const existingUser = await User.findOne({ email });
+        if (existingUser) return res.status(400).json({ message: "User already exists" });
+
+        const hashedPassword = await bcrypt.hash(password, 10);
+        const user = new User({ username, email, password: hashedPassword });
+        await user.save();
+
+        res.json({ success: true, message: "User registered successfully" });
+    } catch (error) {
+        res.status(500).json({ message: "Signup error", error });
+    }
+});
+
+// Login Route
+app.post("/login", async (req, res) => {
+    const { email, password } = req.body;
+
+    try {
+        const user = await User.findOne({ email });
+        if (!user) return res.status(400).json({ message: "User not found" });
+
+        const isPasswordValid = await bcrypt.compare(password, user.password);
+        if (!isPasswordValid) return res.status(400).json({ message: "Invalid credentials" });
+
+        const token = jwt.sign({ userId: user._id }, SECRET_KEY, { expiresIn: "1h" });
+        res.json({ token, userId: user._id, username: user.username });
+    } catch (error) {
+        res.status(500).json({ message: "Login error", error });
+    }
+});
+
+// Root Route
 app.get("/", (req, res) => {
     res.send("Express app is running");
     console.log("Express app is running");
 });
+
+// Image Upload Configuration
 const storage = multer.diskStorage({
     destination: "./upload/images",
     filename: (req, file, cb) => {
@@ -31,11 +80,6 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage: storage });
-
-app.get("/", (req, res) => {
-    res.send("Express app is running");
-    console.log("Express app is running");
-});
 
 // Image Upload Route
 app.post("/upload", upload.single("image"), (req, res) => {
@@ -80,18 +124,16 @@ const productSchema = new mongoose.Schema({
 });
 
 const Product = mongoose.model("Product", productSchema);
+
+// Add Product
 app.post('/addproduct', async (req, res) => {
     console.log("Received product data:", req.body);
 
     let products = await Product.find({});
     let id = products.length > 0 ? products[products.length - 1].id + 1 : 1;
-    
-    try {
-        const product = new Product({
-            id,
-            ...req.body 
-        });
 
+    try {
+        const product = new Product({ id, ...req.body });
         await product.save();
         console.log("Product saved:", product);
         res.json({ success: true, product });
@@ -115,6 +157,7 @@ app.get('/allproducts', async (req, res) => {
     res.send(products);
 });
 
+// Start Server
 app.listen(port, (e) => {
     if (!e) {
         console.log("Server is running on port:" + port);
