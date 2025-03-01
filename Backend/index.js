@@ -19,7 +19,7 @@ mongoose.connect("mongodb+srv://navinv:9788665770@cluster0.y2evh.mongodb.net/?re
     useUnifiedTopology: true
 });
 
-// User Schema
+// User Schemas
 const userSchema = new mongoose.Schema({
     username: { type: String, required: true },
     email: { type: String, required: true, unique: true },
