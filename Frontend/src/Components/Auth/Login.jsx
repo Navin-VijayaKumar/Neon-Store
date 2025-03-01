@@ -21,7 +21,7 @@ const Login = () => {
       localStorage.setItem("token", response.data.token); // Store token
       localStorage.setItem("userId", response.data.userId);
       alert("Login successful!");
-      navigate("/dashboard"); // Redirect to dashboard
+      navigate("/"); // Redirect to dashboard
     } catch (error) {
       alert("Login failed: " + (error.response?.data?.message || "Server error"));
     }
