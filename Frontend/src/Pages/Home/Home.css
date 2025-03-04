@@ -267,7 +267,7 @@ body{
 }
 .all-timeline1{
   position: relative;
-  background-color: rgb(121, 187, 187);
+  background-image: linear-gradient(to right,rgb(194, 87, 183), rgb(106, 0, 244), rgb(35, 185, 152));
   z-index: 1;
 
 }

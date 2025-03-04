@@ -8,7 +8,7 @@ const cors = require("cors");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-const SECRET_KEY = "your_secret_key"; // Replace with a strong secret key
+const SECRET_KEY = "43x343vvxxzaedd3445679gh";
 
 app.use(express.json());
 app.use(cors());

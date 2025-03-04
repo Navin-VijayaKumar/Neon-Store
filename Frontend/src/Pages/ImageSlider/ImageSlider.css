@@ -2,7 +2,7 @@
     padding-bottom:200px;
     padding-top: 140px;
     padding-right: 20px;
-    background-color: rgb(121, 187, 187);
+    background-image: linear-gradient(to right,rgb(194, 87, 183), rgb(106, 0, 244), rgb(35, 185, 152));
 
 }
 .carousel {
@@ -19,11 +19,14 @@
     display: flex;
     width: 100%; /* Make it fill the .carousel */
     transition: transform 0.5s ease-in-out;
+    background-image: linear-gradient(to top,rgb(194, 87, 183), rgb(106, 0, 244), rgb(35, 185, 152));
+
 }
   
 .carousel-image {
-    width: 100%; /* Make it responsive */
+    width: 95%; /* Make it responsive */
     height: 800px; /* Increase height */
+    /* object-fit:contain; */
     object-fit: cover;
     border-radius: 10px;
 }
