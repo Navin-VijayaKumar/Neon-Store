@@ -18,7 +18,7 @@
   display: grid;
   grid-template-columns:0.5fr 2fr 1fr 1fr 1fr 1fr;
   align-items: center;
-  gap: 75px;
+  gap: 60px;
   font-weight: 600;
   padding: 20px 0px;
   color: rgb(255, 255, 255);
@@ -26,13 +26,16 @@
 
 
 }
+
 .cartitems-format{
     font-size: 17px;
     font-weight: 500;
 
 }
 .cartitem-icon{
-    height: 120px;
+    height: 130px;
+    width:160px;
+    object-fit: cover;
 
 }
 .remove{
@@ -48,6 +51,9 @@
     background-color: rgb(143, 224, 224);
     border-radius: 6px;
     font-size: 25px;
+}
+.cart-name{
+  width: 160px;
 }
 .cartitems-down{
     display: flex;

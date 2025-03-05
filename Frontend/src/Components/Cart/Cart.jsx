@@ -100,7 +100,7 @@ const Cart = () => {
             <div key={e.id}>
               <div className="cartitems-format cartitems-main">
                 <img src={e.image} alt={e.name} className="cartitem-icon" />
-                <p>{e.name}</p>
+                <p className="cart-name">{e.name}</p>
                 <p> ₹{e.new_price}</p>
                 <p>{e.rating}</p>
                 <p> ₹{e.new_price * cartItem[e.id]}</p>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './About.css'
+import Timeline from '../Timeline/Timeline'
 const About = () => {
   return (
     <div className="about-con">
@@ -10,7 +11,8 @@ const About = () => {
           <p>Shop Now</p>
         </div>
         </Link>
-        <p className='about-c'>About Neon Store
+        <Timeline></Timeline>
+        <p className='about-c'>About <br></br>Neon Store
 Welcome to Neon Store, your ultimate destination for digital game keys and software! We provide instant access to a vast collection of games across multiple platforms, ensuring a seamless and secure shopping experience for gamers worldwide.<br></br>
 <br></br>
 Why Choose Us?<br></br>

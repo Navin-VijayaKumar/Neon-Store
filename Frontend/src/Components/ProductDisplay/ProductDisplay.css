@@ -51,8 +51,9 @@ font-weight:900;
 
 .inner-display-right{
     width: 400px;
-    height: 600px;
+    height: 700px;
     border: 1px solid rgb(0, 85, 255);
+    background-color: #6a7676;
     border-radius: 12px;
     transition: 1.5s;
 }
@@ -77,6 +78,7 @@ font-weight:900;
 }
 .inner-display-right img{
     width: 300px;
+    height: 200px;
   
 }
 .age-limit img{
