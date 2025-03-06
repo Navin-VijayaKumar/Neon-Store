@@ -53,7 +53,7 @@ font-weight:900;
     width: 400px;
     height: 700px;
     border: 1px solid rgb(0, 85, 255);
-    background-color: #6a7676;
+    background-color: #d1cece;
     border-radius: 12px;
     transition: 1.5s;
 }
@@ -182,14 +182,14 @@ font-weight:900;
 }
 
 .inner-price p{
-    color: rgb(183, 210, 201);
+    color: rgb(7, 7, 7);
     font-weight: bold;
     font-size: 30px;
     transition: 3s;
 
 }
 .inner-price p:hover{
-    color: aqua;
+    color: rgb(53, 0, 226);
 }
 
 .popup-overlay {
