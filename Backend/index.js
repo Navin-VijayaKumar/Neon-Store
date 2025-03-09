@@ -15,10 +15,8 @@ app.use(cors());
 app.use("/images", express.static("upload/images"));
 
 mongoose.connect("mongodb+srv://navinv:9788665770@cluster0.y2evh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
- {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+
+);
 
 // User Schemas
 const userSchema = new mongoose.Schema({

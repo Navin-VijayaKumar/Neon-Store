@@ -1,4 +1,4 @@
-.buy-con{
+.buy-con {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -8,8 +8,13 @@
     width: 600px;
     border: 2px solid white;
     border-radius: 12px;
-    height: 800px;
+    max-height: 80vh; /* Ensure it fits within the viewport */
+    overflow: visible !important;
 }
+
+
+
+
 .buy-inner p{
     display: flex;
     align-items: center;
@@ -31,4 +36,8 @@
     margin: 50px;
     width: 75px;
     
+}
+html, body {
+    height: 100%;
+    overflow: visible !important;
 }

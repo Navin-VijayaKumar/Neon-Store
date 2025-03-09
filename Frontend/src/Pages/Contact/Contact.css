@@ -1,4 +1,82 @@
 .contact-con{
     background-color: rgb(30, 33, 31);
     padding-top: 80px;
+    padding-bottom: 50px;
+}
+.contact-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.contact-container h2 {
+    font-size: 28px;
+    font-family: monospace;
+    margin-bottom: 10px;
+}
+
+.contact-container p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.contact-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-container input,
+.contact-container textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.contact-container textarea {
+    height: 120px;
+    resize: none;
+}
+
+.contact-container button {
+    background: cyan;
+    color: black;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.contact-container button:hover {
+    background: white;
+    color: black;
+}
+
+.contact-details {
+    margin-top: 20px;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: cyan;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
 }

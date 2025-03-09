@@ -23,9 +23,11 @@ const Buy = () => {
       return;
     }
 
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Force scroll on click
+
     const options = {
-      key: "your_razorpay_key", // Add your actual Razorpay key
-      amount: new_price * 100, // Amount in paise
+      key: "your_razorpay_key",
+      amount: new_price * 100,
       currency: "INR",
       name: "Neon_Store",
       description: "Test transaction",
@@ -44,7 +46,8 @@ const Buy = () => {
 
     const pay = new window.Razorpay(options);
     pay.open();
-  };
+};
+
 
   return (
     <div className='buy-con'>
