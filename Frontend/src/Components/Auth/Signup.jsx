@@ -14,7 +14,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:4000/signup", formData);
+      const response = await axios.post("https://neon-store-backend.onrender.com/signup", formData);
       alert(response.data.message);
       navigate("/login");
     } catch (error) {

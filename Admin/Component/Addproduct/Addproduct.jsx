@@ -48,7 +48,7 @@ const AddProduct = () => {
     formData.append("image", file);
 
     try {
-      const response = await fetch("http://localhost:4000/upload", {
+      const response = await fetch("https://neon-store-backend.onrender.com/upload", {
         method: "POST",
         body: formData,
       });
@@ -101,7 +101,7 @@ const AddProduct = () => {
     };
 
     try {
-      const productResponse = await fetch("http://localhost:4000/addproduct", {
+      const productResponse = await fetch("https://neon-store-backend.onrender.com/addproduct", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(productData),

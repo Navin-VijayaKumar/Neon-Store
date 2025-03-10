@@ -15,7 +15,7 @@ const ContextProvider = (props) => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:4000/allproducts")
+    fetch("https://neon-store-backend.onrender.com/allproducts")
       .then((response) => response.json())
       .then((data) => {
         setAllProduct(data);
